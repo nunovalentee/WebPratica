@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ts5Kx4H/PJDBTjqqVCBDprE28ZEhNjuW27TBhxla0EfN9CbJLeo8Xp58TGTR2xyoYiW0yP09IGBIOGI7G7ew/g==",
+  "dgSpecHash": "MB4DfyKZCr2CLG3AH1iTFiqGvTPMHoU4NJuRC70gnN225bGyYjuORFXegImXgpBpzcEt/J0wzclWLVkOovfvLw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nunov\\Desktop\\Testes Práticos\\TP01_2021_v2\\TP01_2021_v2\\TP01_2021_v2.csproj",
+  "projectFilePath": "C:\\Users\\nunov\\Desktop\\WebPratica\\TP01_2021_v2\\TP01_2021_v2\\TP01_2021_v2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nunov\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\nunov\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

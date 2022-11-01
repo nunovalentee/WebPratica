@@ -24,11 +24,11 @@ namespace TP01_2021_v2.Models
         public string ISBN { get; set; }
 
         // formato .jpg
-        [RegularExpression(@".+\.[jJ][pP][gG]", ErrorMessage = "Formato inválido!")]
+        [RegularExpression(@"^.+\.([jJ][pP][gG])$", ErrorMessage = "Formato inválido!")]
         public string Capa { get; set; } = " ";
 
         // formato .jpg
-        [RegularExpression(@".+\.[jJ][pP][gG]", ErrorMessage = "Formato inválido!")]
+        [RegularExpression(@"^.+\.([jJ][pP][gG])$", ErrorMessage = "Formato inválido!")]
         public string Contracapa { get; set; } = " ";
     }
 }

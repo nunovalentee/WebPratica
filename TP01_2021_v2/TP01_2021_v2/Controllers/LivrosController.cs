@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using EW_2021_PAP1_DB_al73891;
 using TP01_2021_v2.Models;
 using Microsoft.AspNetCore.Http;
+using System.Text.RegularExpressions;
 
 namespace TP01_2021_v2.Controllers
 {
