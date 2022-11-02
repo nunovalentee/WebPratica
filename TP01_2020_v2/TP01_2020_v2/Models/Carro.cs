@@ -15,7 +15,7 @@ namespace TP01_2020_v2.Models
         public int Ano { get; set; }
 
         [Required(ErrorMessage = "This field is required!")]
-        [RegularExpression(@"^.+\.[jJ][pP][gG]$", ErrorMessage = "Only jpg images!")]
+        [RegularExpression(@"([^\\s]+(\\.(?i)(jpe?g|png|gif|bmp))$)", ErrorMessage = "Only jpg images!")]
         public string Foto { get; set; }
         
         [Required(ErrorMessage = "This field is required!")]

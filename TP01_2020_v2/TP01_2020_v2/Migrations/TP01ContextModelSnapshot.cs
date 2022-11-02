@@ -45,7 +45,7 @@ namespace TP01_2020_v2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Carro");
+                    b.ToTable("Carro", (string)null);
                 });
 #pragma warning restore 612, 618
         }
