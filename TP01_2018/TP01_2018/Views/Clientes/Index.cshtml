@@ -1,0 +1,59 @@
+﻿@model IEnumerable<TP01_2018.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                Nível
+            </th>
+            <th>
+                Antiguidade
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <a asp-action="Delete" asp-route-id="@item.Id">X</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NivelCliente)
+            </td>
+            @*<td>
+                @if(@DateTime.Now <= @item.DataRegisto.AddDays(31))
+                {
+                    @DateTime.Now.Subtract(@item.DataRegisto).Days Dias
+                }
+                else if(@DateTime.Now <= @item.DataRegisto.AddYears(1)){
+                    @DateTime.Now.Subtract(@item.DataRegisto).Month Meses
+                }else{
+                    @DateTime.Now.Subtract(@item.DataRegisto).Year Ano
+                }
+            </td>*@
+        </tr>
+        }
+    </tbody>
+</table>
