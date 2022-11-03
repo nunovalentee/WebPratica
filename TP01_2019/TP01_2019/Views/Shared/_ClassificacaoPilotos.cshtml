@@ -1,0 +1,53 @@
+﻿@model IEnumerable<TP01_2019.Models.Piloto>
+
+<p>
+    <a asp-action="Create">Adicionar Piloto</a>
+</p>
+<p>
+    <a asp-action="Index" asp-controller="Carros">Ver Carro</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Carro.Numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Carro.Equipa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pontos)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Carro.Numero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Carro.Equipa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pontos)
+                </td>
+                @if (item.Carro != null)
+                {
+                    <td>
+                        <a asp-action="Adiciona" asp-route-id="@item.Id">Adicionar Pontos</a>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
