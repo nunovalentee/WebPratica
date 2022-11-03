@@ -25,10 +25,10 @@ namespace TP01_2021_v2.Models
 
         // formato .jpg
         [RegularExpression(@"^.+\.([jJ][pP][gG])$", ErrorMessage = "Formato inválido!")]
-        public string Capa { get; set; } = " ";
+        public string? Capa { get; set; }
 
         // formato .jpg
         [RegularExpression(@"^.+\.([jJ][pP][gG])$", ErrorMessage = "Formato inválido!")]
-        public string Contracapa { get; set; } = " ";
+        public string? Contracapa { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qfPbP6Pg9rmw4AyzGlItLhTTw3N6K0K8B3mM1CBuERU=",
+  "Hash": "J0Rw2RJ4D88rnSN7P/uoegxXVkId4sydQMeLbIF0sic=",
   "Source": "TP01_2020_v2",
   "BasePath": "_content/TP01_2020_v2",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Fotos\\Dodge_Demon.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\nunov\\Desktop\\WebPratica\\TP01_2020_v2\\TP01_2020_v2\\wwwroot\\Fotos\\lamborghini_aventador.jpg",
+      "SourceId": "TP01_2020_v2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nunov\\Desktop\\WebPratica\\TP01_2020_v2\\TP01_2020_v2\\wwwroot\\",
+      "BasePath": "_content/TP01_2020_v2",
+      "RelativePath": "Fotos/lamborghini_aventador.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Fotos\\lamborghini_aventador.jpg"
     },
     {
       "Identity": "C:\\Users\\nunov\\Desktop\\WebPratica\\TP01_2020_v2\\TP01_2020_v2\\wwwroot\\Fotos\\Mercedes-AMG_GT.jpg",

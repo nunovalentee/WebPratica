@@ -36,9 +36,17 @@ namespace TP01_2020_v2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Inserir([Bind("Marca", "Ano", "Foto")]Carro carro, IFormFile Foto)
         {
+            if(Foto == null)
+            {
+                ModelState.AddModelError("Foto", "Campo obrigatório");
+                return View(carro);
+            }
+
+            carro.Foto = Foto.FileName;
+
             if (ModelState.IsValid)
             {
-                var destination = Path.Combine(_he.ContentRootPath, "wwwroot/Fotos", Path.GetFileName(carro.Foto));
+                var destination = Path.Combine(_he.ContentRootPath, "wwwroot/Fotos/", Path.GetFileName(carro.Foto));
 
                 FileStream fs = new FileStream(destination, FileMode.Create);
 

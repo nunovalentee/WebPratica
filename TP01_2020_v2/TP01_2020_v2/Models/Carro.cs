@@ -14,9 +14,8 @@ namespace TP01_2020_v2.Models
         [Range(2000,2022, ErrorMessage ="{0} de matricula tem de ser superior a {1}!")]
         public int Ano { get; set; }
 
-        [Required(ErrorMessage = "This field is required!")]
-        [RegularExpression(@"([^\\s]+(\\.(?i)(jpe?g|png|gif|bmp))$)", ErrorMessage = "Only jpg images!")]
-        public string Foto { get; set; }
+        [RegularExpression(@"^.+\.([jJ][pP][gG])$", ErrorMessage = "Only jpg images!")]
+        public string? Foto { get; set; }
         
         [Required(ErrorMessage = "This field is required!")]
         public Boolean Vendido { get; set; } = false;
