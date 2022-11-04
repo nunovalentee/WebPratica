@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Projeto_Milionario.Models.Utilizador>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Escola</h1>
+
+<p>
+    <a asp-action="Create">Adicionar utilizador</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Foto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cargo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Curso)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            @if(item.Foto != null)
+            {
+                <td>
+                    <img src="~/Fotos/@item.Foto" width="200" height="100">
+                </td>
+            }else{
+                <td></td>
+            }
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Curso.Nome)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Numero">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Numero" class="btn btn-outdanger">Remover</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

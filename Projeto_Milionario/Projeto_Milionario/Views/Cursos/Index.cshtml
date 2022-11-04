@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Projeto_Milionario.Models.Curso>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Cursos</h1>
+
+@if(TempData["success"]!=null){
+    <h4 class="text-success">@TempData["success"]</h4>
+}
+@if (TempData["success2"] != null)
+{
+    <h4 class="text-success">@TempData["success2"]</h4>
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Criar curso</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Escola)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Escola)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outdanger">Remover</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
