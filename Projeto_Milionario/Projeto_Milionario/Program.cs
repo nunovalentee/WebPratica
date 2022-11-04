@@ -8,6 +8,10 @@ builder.Services.AddDbContext<Projeto_MilionarioContext>(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Permite criar utilizador sem foto
+builder.Services.AddControllers(
+    options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
